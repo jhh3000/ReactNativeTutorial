@@ -24,8 +24,8 @@ function todo(todos = [], action) {
           }
         ]
     case TOGGLE_TODO:
-      return todos.map((todo, index) => {
-          if (index === action.index) {
+      return todos.map((todo) => {
+          if (todo.id === action.id) {
             return Object.assign({}, todo, {
               completed: !todo.completed,
             })
