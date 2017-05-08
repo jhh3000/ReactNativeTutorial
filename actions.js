@@ -17,14 +17,14 @@ export function addTodo(text) {
   }
 }
 
-export function toggleTodo(id) {
+export function toggleTodo(index) {
   return {
     type: TOGGLE_TODO,
-    id,
+    index,
   }
 }
 
-export function setVisibilityFilters(filter) {
+export function setVisibilityFilter(filter) {
   return {
     type: SET_VISIBILITY_FILTER,
     filter,
