@@ -18,6 +18,7 @@ function todo(todos = [], action) {
       return [
           ...todos,
           {
+            id: action.id,
             text: action.text,
             completed: false,
           }
@@ -38,7 +39,7 @@ function todo(todos = [], action) {
 
 const todoApp = combineReducers({
   visibilityFilter,
-  todo,
+  todos: todo,
 })
 
 export default todoApp;
